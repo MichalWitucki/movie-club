@@ -1,0 +1,37 @@
+@import url('./main-layout.css');
+@import url('./views/main-view.css');
+@import url('./views/view1logged-view.css');
+@import url('./views/view2user-view.css');
+@import url('./views/viev3admin-view.css');
+@import url('@fontsource/ibm-plex-sans/index.css');    html {
+      --lumo-base-color: #ffcc00ff;
+      --lumo-primary-color: hsla(228, 0%, 0%, 1);
+      --lumo-primary-color-50pct: hsla(228, 0%, 0%, 0.5);
+      --lumo-primary-color-10pct: hsla(228, 0%, 0%, 0.1);
+      --lumo-shade: hsl(214, 0%, 0%);
+      --lumo-shade-5pct: hsla(214, 0%, 0%, 0.05);
+      --lumo-shade-10pct: hsla(214, 0%, 0%, 0.1);
+      --lumo-shade-20pct: hsla(214, 0%, 0%, 0.2);
+      --lumo-shade-30pct: hsla(214, 0%, 0%, 0.3);
+      --lumo-shade-40pct: hsla(214, 0%, 0%, 0.4);
+      --lumo-shade-50pct: hsla(214, 0%, 0%, 0.5);
+      --lumo-shade-60pct: hsla(214, 0%, 0%, 0.6);
+      --lumo-shade-70pct: hsla(214, 0%, 0%, 0.7);
+      --lumo-shade-80pct: hsla(214, 0%, 0%, 0.8);
+      --lumo-shade-90pct: hsla(214, 0%, 0%, 0.9);
+      --lumo-border-radius-s: calc(var(--lumo-size-m) / 6);
+      --lumo-border-radius-m: calc(var(--lumo-size-m) / 2);
+      --lumo-border-radius-l: var(--lumo-size-m);
+      --lumo-size-xl: 3rem;
+      --lumo-size-l: 2.5rem;
+      --lumo-size-m: 2rem;
+      --lumo-size-s: 1.75rem;
+      --lumo-size-xs: 1.5rem;
+      --lumo-space-xl: 1.875rem;
+      --lumo-space-l: 1.25rem;
+      --lumo-space-m: 0.625rem;
+      --lumo-space-s: 0.3125rem;
+      --lumo-space-xs: 0.1875rem;
+--lumo-font-family: IBM Plex Sans;
+
+    }
