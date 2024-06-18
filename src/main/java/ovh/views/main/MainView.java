@@ -2,6 +2,7 @@ package ovh.views.main;
 
 import com.vaadin.flow.component.Composite;
 import com.vaadin.flow.component.html.H1;
+import com.vaadin.flow.component.html.H2;
 import com.vaadin.flow.component.html.Image;
 import com.vaadin.flow.component.html.Paragraph;
 import com.vaadin.flow.component.icon.Icon;
@@ -13,7 +14,6 @@ import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.router.RouteAlias;
 import com.vaadin.flow.server.auth.AnonymousAllowed;
-import com.vaadin.flow.theme.lumo.LumoIcon;
 import ovh.views.MainLayout;
 
 @PageTitle("Main")
@@ -33,8 +33,9 @@ public class MainView extends Composite<VerticalLayout> {
         Paragraph polishMovieTitle = new Paragraph();
         Paragraph englishMovieTitle = new Paragraph();
         Paragraph yearOfProduction = new Paragraph();
+        HorizontalLayout rateRow = new HorizontalLayout();
         Icon rateIcon = VaadinIcon.STAR.create();
-        Paragraph rate = new Paragraph();
+        H2 rate = new H2();
 
         getContent().setWidth("100%");
         getContent().getStyle().set("flex-grow", "1");
@@ -56,6 +57,11 @@ public class MainView extends Composite<VerticalLayout> {
         movieDescriptionColumn.setWidth("100%");
         movieDescriptionColumn.getStyle().set("flex-grow", "1");
 
+        rateRow.setWidth("100%");
+        rateRow.getStyle().set("flex-grow", "1");
+        rateRow.setAlignItems(FlexComponent.Alignment.END);
+        rateRow.setJustifyContentMode(FlexComponent.JustifyContentMode.START);
+        rateRow.setAlignSelf(FlexComponent.Alignment.END, rate);
         h1.setText("MOVIE CLUB");
         h1.setWidth("max-content");
 
@@ -69,15 +75,19 @@ public class MainView extends Composite<VerticalLayout> {
         polishMovieTitle.setText("Tytuł filmu");
         polishMovieTitle.getStyle()
                 .set("font-size", "var(--lumo-font-size-xl)")
-                .set("font-color", "orange");
+                .set("font-color", "orange")
+                .setHeight("min-content");
 
         englishMovieTitle.setText("Angielski tytuł filmu");
+        englishMovieTitle.setHeight("min-content");
 
         yearOfProduction.setText("1988");
+        yearOfProduction.setHeight("min-content");
 
         rateIcon.setColor("orange");
 
         rate.setText("8.7");
+        rate.setWidth("100%");
 
         getContent().add(topRow);
         getContent().add(mainContent);
@@ -91,7 +101,9 @@ public class MainView extends Composite<VerticalLayout> {
         movieDescriptionColumn.add(polishMovieTitle);
         movieDescriptionColumn.add(englishMovieTitle);
         movieDescriptionColumn.add(yearOfProduction);
-        movieDescriptionColumn.add(rateIcon);
-        movieDescriptionColumn.add(rate);
+        movieDescriptionColumn.add(rateRow);
+
+        rateRow.add(rateIcon);
+        rateRow.add(rate);
     }
 }
