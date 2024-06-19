@@ -1,4 +1,4 @@
-package ovh;
+package ovh.witucki;
 
 import com.vaadin.flow.component.dependency.NpmPackage;
 import com.vaadin.flow.component.page.AppShellConfigurator;
@@ -10,7 +10,7 @@ import org.springframework.boot.autoconfigure.liquibase.LiquibaseAutoConfigurati
 import org.springframework.boot.autoconfigure.sql.init.SqlDataSourceScriptDatabaseInitializer;
 import org.springframework.boot.autoconfigure.sql.init.SqlInitializationProperties;
 import org.springframework.context.annotation.Bean;
-import ovh.data.UserRepository;
+import ovh.witucki.data.UserRepository;
 
 /**
  * The entry point of the Spring Boot application.

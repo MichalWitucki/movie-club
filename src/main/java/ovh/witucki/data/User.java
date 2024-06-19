@@ -1,30 +1,27 @@
-package ovh.data;
+package ovh.witucki.data;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import jakarta.persistence.Column;
-import jakarta.persistence.ElementCollection;
-import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
-import jakarta.persistence.FetchType;
-import jakarta.persistence.Lob;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
+
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
-@Table(name = "application_user")
+@Table(name = "users")
 public class User extends AbstractEntity {
 
     private String username;
     private String name;
     @JsonIgnore
     private String hashedPassword;
-    @Enumerated(EnumType.STRING)
-    @ElementCollection(fetch = FetchType.EAGER)
-    private Set<Role> roles;
-    @Lob
-    @Column(length = 1000000)
-    private byte[] profilePicture;
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(
+            name = "user_roles",
+            joinColumns = @JoinColumn(name = "user_id", referencedColumnName = "id"),
+            inverseJoinColumns = @JoinColumn(name = "role_id", referencedColumnName = "id")
+    )
+    private Set<Role> roles = new HashSet<>();;
+
 
     public String getUsername() {
         return username;
@@ -49,12 +46,6 @@ public class User extends AbstractEntity {
     }
     public void setRoles(Set<Role> roles) {
         this.roles = roles;
-    }
-    public byte[] getProfilePicture() {
-        return profilePicture;
-    }
-    public void setProfilePicture(byte[] profilePicture) {
-        this.profilePicture = profilePicture;
     }
 
 }

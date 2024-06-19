@@ -1,4 +1,4 @@
-package ovh.views;
+package ovh.witucki.views;
 
 import com.vaadin.flow.component.Component;
 import com.vaadin.flow.component.applayout.AppLayout;
@@ -35,12 +35,12 @@ import com.vaadin.flow.theme.lumo.LumoUtility.Width;
 import java.io.ByteArrayInputStream;
 import java.util.Optional;
 import org.vaadin.lineawesome.LineAwesomeIcon;
-import ovh.data.User;
-import ovh.security.AuthenticatedUser;
-import ovh.views.main.MainView;
-import ovh.views.viev3admin.Viev3adminView;
-import ovh.views.view1logged.View1loggedView;
-import ovh.views.view2user.View2userView;
+import ovh.witucki.data.User;
+import ovh.witucki.security.AuthenticatedUser;
+import ovh.witucki.views.main.MainView;
+import ovh.witucki.views.viev3admin.Viev3adminView;
+import ovh.witucki.views.view1logged.View1loggedView;
+import ovh.witucki.views.view2user.View2userView;
 
 /**
  * The main view is a top-level placeholder for other views.
@@ -105,9 +105,9 @@ public class MainLayout extends AppLayout {
             User user = maybeUser.get();
 
             Avatar avatar = new Avatar(user.getName());
-            StreamResource resource = new StreamResource("profile-pic",
-                    () -> new ByteArrayInputStream(user.getProfilePicture()));
-            avatar.setImageResource(resource);
+//            StreamResource resource = new StreamResource("profile-pic",
+//                    () -> new ByteArrayInputStream(user.getProfilePicture()));
+//            avatar.setImageResource(resource);
             avatar.setThemeName("xsmall");
             avatar.getElement().setAttribute("tabindex", "-1");
 

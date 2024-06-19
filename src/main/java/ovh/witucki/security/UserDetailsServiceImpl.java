@@ -1,4 +1,4 @@
-package ovh.security;
+package ovh.witucki.security;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -9,8 +9,8 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import ovh.data.User;
-import ovh.data.UserRepository;
+import ovh.witucki.data.User;
+import ovh.witucki.data.UserRepository;
 
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {

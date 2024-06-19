@@ -1,4 +1,4 @@
-package ovh.views.main;
+package ovh.witucki.views.main;
 
 import com.vaadin.flow.component.Composite;
 import com.vaadin.flow.component.html.H1;
@@ -14,7 +14,7 @@ import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.router.RouteAlias;
 import com.vaadin.flow.server.auth.AnonymousAllowed;
-import ovh.views.MainLayout;
+import ovh.witucki.views.MainLayout;
 
 @PageTitle("Main")
 @Route(value = "", layout = MainLayout.class)

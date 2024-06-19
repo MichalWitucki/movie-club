@@ -1,4 +1,4 @@
-package ovh.data;
+package ovh.witucki.data;
 
 
 import org.springframework.data.jpa.repository.JpaRepository;

@@ -1,4 +1,4 @@
-package ovh.views.viev3admin;
+package ovh.witucki.views.viev3admin;
 
 import com.vaadin.flow.component.Composite;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
@@ -7,7 +7,7 @@ import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.theme.lumo.LumoUtility.Gap;
 import jakarta.annotation.security.RolesAllowed;
-import ovh.views.MainLayout;
+import ovh.witucki.views.MainLayout;
 
 @PageTitle("viev3admin")
 @Route(value = "viev3", layout = MainLayout.class)

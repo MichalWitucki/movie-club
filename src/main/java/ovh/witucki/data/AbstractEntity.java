@@ -1,4 +1,4 @@
-package ovh.data;
+package ovh.witucki.data;
 
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -11,9 +11,7 @@ import jakarta.persistence.Version;
 public abstract class AbstractEntity {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "idgenerator")
-    // The initial value is to account for data.sql demo data ids
-    @SequenceGenerator(name = "idgenerator", initialValue = 1000)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Version

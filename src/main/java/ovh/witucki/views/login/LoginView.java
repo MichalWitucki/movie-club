@@ -1,4 +1,4 @@
-package ovh.views.login;
+package ovh.witucki.views.login;
 
 import com.vaadin.flow.component.login.LoginI18n;
 import com.vaadin.flow.component.login.LoginOverlay;
@@ -9,7 +9,7 @@ import com.vaadin.flow.router.Route;
 import com.vaadin.flow.router.internal.RouteUtil;
 import com.vaadin.flow.server.VaadinService;
 import com.vaadin.flow.server.auth.AnonymousAllowed;
-import ovh.security.AuthenticatedUser;
+import ovh.witucki.security.AuthenticatedUser;
 
 @AnonymousAllowed
 @PageTitle("Login")
